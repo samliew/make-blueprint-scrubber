@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Make Blueprint Scrubber</title>
+  <meta content="A code editor to remove unnecessary metadata from Make blueprints and minify them" name="description" />
+
+  <meta content="Make Blueprint Scrubber" property="og:title" />
+  <meta content="A code editor to remove unnecessary metadata from Make blueprints and minify them" property="og:description" />
+  <meta property="og:type" content="website" />
+
+  <meta content="Make Blueprint Scrubber" property="twitter:title" />
+  <meta content="A code editor to remove unnecessary metadata from Make blueprints and minify them" property="twitter:description" />
+  <meta content="summary_large_image" name="twitter:card" />
+
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap" rel="stylesheet" />
+  <link href="/assets/css/webflow.9498fd7ed.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/editor.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="header-left"></div>
+    <h1 class="main-title">Make Blueprint Minifier</h1>
+    <div class="header-right"></div>
+  </header>
+
+  <main class="event-editor w-container" style="padding-bottom: 3rem;">
+    <div class="w-col">
+      <aside>This is a UI to assist in removing unnecessary details from a Make blueprint export. Paste a blueprint or module export below, and it will automatically replace it with a minified version which you can immediately copy out for sharing.</aside>
+
+      <h4 id="event-json" style="display: none;">Blueprint JSON</h4>
+
+      <div class="json-output-wrapper">
+        <textarea name="output" id="json-output" rows="10" class="w-input json-output" style="height: calc(100vh - 460px) !important; resize: none;" placeholder="Paste Make blueprint here." required></textarea>
+        <div class="import-export-actions">
+          <button class="w-button small" id="copy-json" type="button">Copy</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="w-container">
+      <p>Chat with us in the <a href="https://samliew.com/make-discord-invite" target="_blank">Make Discord Server</a></p>
+      <div class="disclaimer">
+        The Contents of this Website are provided on an &quot;as is&quot; basis without warranties of any kind. To the fullest extent permitted by law, the owners of this website do not warrant and hereby disclaims any warranty as to the accuracy, correctness, reliability, timeliness, non-infringement, title, merchantability or fitness for any particular purpose of the Contents of this Website; and that the Contents available through this Website or any functions associated therewith will be uninterrupted or error-free, or that defects will be corrected or that this Website and the server is and will be free of all viruses and/or other harmful elements. The owners of this website shall also not be liable for any damage or loss of any kind caused as a result (direct or indirect) of the use of the Website, including but not limited to any damage or loss suffered as a result of reliance on the Contents contained in or available from the Website.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js" integrity="sha512-JZSo0h5TONFYmyLMqp8k4oPhuo6yNk9mHM+FY50aBjpypfofqtEWsAgRDQm94ImLCzSaHeqNvYuD9382CEn2zw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/assets/js/editor.js"></script>
+</body>
+
+</html>
