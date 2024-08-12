@@ -27,7 +27,7 @@ const toSlug = str => str?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-
       document.querySelector('#json-output').classList.remove('error');
 
       // Iterate through data object and remove certain property keys
-      const removeKeys = ['restore', 'expect', 'interface', 'parameters', 'zone'];
+      const removeKeys = ['messages', 'restore', 'expect', 'interface', 'parameters', 'zone'];
       const removeProperties = obj => {
         if (obj && typeof obj === 'object') {
           for (const key in obj) {
@@ -38,6 +38,14 @@ const toSlug = str => str?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-
               removeProperties(obj[key]);
             }
           }
+        }
+        // If value is an array, iterate through each item
+        else if (Array.isArray(obj)) {
+          obj.forEach(removeProperties);
+        }
+        // If value is a string, remove email addresses
+        else if (typeof obj === 'string' && obj.includes('@')) {
+          obj = obj.replace(/([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,})/gi, 'removed@email.com');
         }
       }
       removeProperties(data);
