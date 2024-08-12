@@ -27,7 +27,7 @@ const toSlug = str => str?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-
       document.querySelector('#json-output').classList.remove('error');
 
       // Iterate through data object and remove certain property keys
-      const removeKeys = ['messages', 'restore', 'expect', 'interface', 'parameters', 'zone'];
+      const removeKeys = ['messages', 'restore', 'expect', 'interface', 'zone'];
       const removeProperties = obj => {
         if (obj && typeof obj === 'object') {
           for (const key in obj) {
