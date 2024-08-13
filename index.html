@@ -31,9 +31,12 @@
 
   <main class="event-editor w-container" style="padding-bottom: 3rem;">
     <div class="w-col">
-      <aside>This is a UI to assist in removing unnecessary details from a Make blueprint export. Paste a blueprint or module export below, and it will automatically replace it with a minified version which you can immediately copy out for sharing.</aside>
+      <aside>
+        <p>This is a UI to assist in removing unnecessary bloat from a Make scenario/module blueprint export. Paste the JSON below, and it will automatically replace it with a minified version which you can immediately copy out for sharing/saving/etc.</p>
+        <p style="margin-bottom: 0;">Provide feedback in the <a href="https://samliew.com/make-discord-invite" target="_blank">Discord Server</a> or <a href="https://community.make.com/t/free-tool-reduce-blueprint-module-export-by-removing-extra-details/50697?u=samliew">Forum Thread</a></p>
+      </aside>
 
-      <h4 id="event-json" style="display: none;">Blueprint JSON</h4>
+      <h4 id="event-json" style="display: none;">Blueprint/Module Export JSON</h4>
 
       <div class="json-output-wrapper">
         <textarea name="output" id="json-output" rows="10" class="w-input json-output" style="height: calc(100vh - 460px) !important; resize: none;" placeholder="Paste Make blueprint here." required></textarea>
